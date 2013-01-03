@@ -1418,14 +1418,14 @@ angular.module('ngMockE2E', ['ng']).config(function($provide) {
  * <pre>
  *   myAppDev = angular.module('myAppDev', ['myApp', 'ngMockE2E']);
  *   myAppDev.run(function($httpBackend) {
- *     phones = [{name: 'phone1'}, {name: 'phone2'}];
+ *     recipes = [{name: 'recipe1'}, {name: 'recipe2'}];
  *
- *     // returns the current list of phones
- *     $httpBackend.whenGET('/phones').respond(phones);
+ *     // returns the current list of recipes
+ *     $httpBackend.whenGET('/recipes').respond(recipes);
  *
- *     // adds a new phone to the phones array
- *     $httpBackend.whenPOST('/phones').respond(function(method, url, data) {
- *       phones.push(angular.fromJSON(data));
+ *     // adds a new recipe to the recipes array
+ *     $httpBackend.whenPOST('/recipes').respond(function(method, url, data) {
+ *       recipes.push(angular.fromJSON(data));
  *     });
  *     $httpBackend.whenGET(/^\/templates\//).passThrough();
  *     //...

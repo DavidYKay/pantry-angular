@@ -1,0 +1,113 @@
+<img ng-src="{{mainImageUrl}}" class="recipe">
+
+<h1>{{recipe.name}}</h1>
+
+<p>{{recipe.description}}</p>
+
+<ul class="recipe-thumbs">
+  <li ng-repeat="img in recipe.images">
+    <img ng-src="{{img}}" ng-click="setImage(img)">
+  </li>
+</ul>
+
+<ul class="specs">
+  <li>
+    <span>Availability and Networks</span>
+    <dl>
+      <dt>Availability</dt>
+      <dd ng-repeat="availability in recipe.availability">{{availability}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Battery</span>
+    <dl>
+      <dt>Type</dt>
+      <dd>{{recipe.battery.type}}</dd>
+      <dt>Talk Time</dt>
+      <dd>{{recipe.battery.talkTime}}</dd>
+      <dt>Standby time (max)</dt>
+      <dd>{{recipe.battery.standbyTime}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Storage and Memory</span>
+    <dl>
+      <dt>RAM</dt>
+      <dd>{{recipe.storage.ram}}</dd>
+      <dt>Internal Storage</dt>
+      <dd>{{recipe.storage.flash}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Connectivity</span>
+    <dl>
+      <dt>Network Support</dt>
+      <dd>{{recipe.connectivity.cell}}</dd>
+      <dt>WiFi</dt>
+      <dd>{{recipe.connectivity.wifi}}</dd>
+      <dt>Bluetooth</dt>
+      <dd>{{recipe.connectivity.bluetooth}}</dd>
+      <dt>Infrared</dt>
+      <dd>{{recipe.connectivity.infrared | checkmark}}</dd>
+      <dt>GPS</dt>
+      <dd>{{recipe.connectivity.gps | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Android</span>
+    <dl>
+      <dt>OS Version</dt>
+      <dd>{{recipe.android.os}}</dd>
+      <dt>UI</dt>
+      <dd>{{recipe.android.ui}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Size and Weigth</span>
+    <dl>
+      <dt>Dimensions</dt>
+      <dd ng-repeat="dim in recipe.sizeAndWeight.dimensions">{{dim}}</dd>
+      <dt>Weight</dt>
+      <dd>{{recipe.sizeAndWeight.weight}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Display</span>
+    <dl>
+      <dt>Screen size</dt>
+      <dd>{{recipe.display.screenSize}}</dd>
+      <dt>Screen resolution</dt>
+      <dd>{{recipe.display.screenResolution}}</dd>
+      <dt>Touch screen</dt>
+      <dd>{{recipe.display.touchScreen | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Hardware</span>
+    <dl>
+      <dt>CPU</dt>
+      <dd>{{recipe.hardware.cpu}}</dd>
+      <dt>USB</dt>
+      <dd>{{recipe.hardware.usb}}</dd>
+      <dt>Audio / headrecipe jack</dt>
+      <dd>{{recipe.hardware.audioJack}}</dd>
+      <dt>FM Radio</dt>
+      <dd>{{recipe.hardware.fmRadio | checkmark}}</dd>
+      <dt>Accelerometer</dt>
+      <dd>{{recipe.hardware.accelerometer | checkmark}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Camera</span>
+    <dl>
+      <dt>Primary</dt>
+      <dd>{{recipe.camera.primary}}</dd>
+      <dt>Features</dt>
+      <dd>{{recipe.camera.features.join(', ')}}</dd>
+    </dl>
+  </li>
+  <li>
+    <span>Additional Features</span>
+    <dd>{{recipe.additionalFeatures}}</dd>
+  </li>
+</ul>

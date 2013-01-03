@@ -1,10 +1,10 @@
-# AngularJS Phone Catalog Tutorial Application
+# AngularJS Recipe Catalog Tutorial Application
 
 ## Overview
 
 This application takes the developer thought the process of building a web-application using
 angular. The application is loosely based on
-[Google phone gallery](http://www.google.com/phone/). Each commit is a separate lesson
+[Google recipe gallery](http://www.google.com/recipe/). Each commit is a separate lesson
 teaching a single aspect of angular.
 
 
@@ -47,7 +47,7 @@ To see the changes which between any two lessons use the git diff command.
 ### step-1
 
 - We have converted the seed application by removing all of the boiler-plate code.
-- We have added single static HTML file which shows a static list of phones. (we will convert this
+- We have added single static HTML file which shows a static list of recipes. (we will convert this
   static page into dynamic one with the help of angular)
 
 
@@ -67,7 +67,7 @@ To see the changes which between any two lessons use the git diff command.
 - added a search box to demonstrate how:
   - the data-binding works on input fields
   - to use [$filter] function
-  - [ng:repeat] automatically shrinks and grows the number of phones in the view
+  - [ng:repeat] automatically shrinks and grows the number of recipes in the view
 - added an end-to-end test to:
   - show how end-to-end tests are written and used
   - to prove that the search box and the repeater are correctly wired together
@@ -84,7 +84,7 @@ To see the changes which between any two lessons use the git diff command.
 
 ### step-5
 
-- adding phone image and links to phone pages
+- adding recipe image and links to recipe pages
 - css to style the page just a notch
 
 
@@ -99,26 +99,26 @@ To see the changes which between any two lessons use the git diff command.
 ### step-7
 
 - Introduce the [$route] service which allows binding URLs for deep-linking with views
-  - Replace content of root controller PhonesCtrl with [$route] configuration
-  - Map `/phones' to PhoneListCtrl and partails/phones-list.html
-  - Map `/phones/phone-id' to PhoneDetailCtrl and partails/phones-detail.html
+  - Replace content of root controller RecipesCtrl with [$route] configuration
+  - Map `/recipes' to RecipeListCtrl and partails/recipes-list.html
+  - Map `/recipes/recipe-id' to RecipeDetailCtrl and partails/recipes-detail.html
   - Copy deep linking parameters to root controller `params` property for access in sub controllers
   - Replace content of index.html with [ng:view]
-- Create PhoneListCtrl view
-  - Move code which fetches phones data into PhoneListCtrl
-  - Move existing HTML from index.html to partials/phone-list.html
-- Create PhoneDetailsCtrl view
-  - Wire [$route] service to map `/phanes/phone-id` to map to this controller.
-  - Empty PhoneDetailsCtrl
+- Create RecipeListCtrl view
+  - Move code which fetches recipes data into RecipeListCtrl
+  - Move existing HTML from index.html to partials/recipe-list.html
+- Create RecipeDetailsCtrl view
+  - Wire [$route] service to map `/phanes/recipe-id` to map to this controller.
+  - Empty RecipeDetailsCtrl
   - Place holder partials/phane-details.html
 
 ### step-8
 
-- Fetch data for and render phone detail view
-  - [$xhr] to fetch details for a specific phone
-  - template for the phone detailed view
+- Fetch data for and render recipe detail view
+  - [$xhr] to fetch details for a specific recipe
+  - template for the recipe detailed view
 - CSS to make it look pretty
-- Detail data for phones in JSON format
+- Detail data for recipes in JSON format
 
 ### step-9
 
@@ -127,7 +127,7 @@ To see the changes which between any two lessons use the git diff command.
 
 ## Development with angular-seed
 
-The following docs apply to all angular-seed projects and since the phonecat tutorial is a project
+The following docs apply to all angular-seed projects and since the recipecat tutorial is a project
 based on angular-seed, the instructions apply to it as well.
 
 ### Running the app during development

@@ -25,7 +25,7 @@
         "infrared": false, 
         "wifi": "802.11 b/g"
     }, 
-    "description": "The Samsung Gem\u2122 maps a route to a smarter mobile experience. By pairing one of the fastest processors in the category with the Android\u2122 platform, the Gem delivers maximum multitasking speed and social networking capabilities to let you explore new territory online. A smart phone at an even smarter price is a real find, so uncover the Gem and discover what\u2019s next.", 
+    "description": "The Samsung Gem\u2122 maps a route to a smarter mobile experience. By pairing one of the fastest processors in the category with the Android\u2122 platform, the Gem delivers maximum multitasking speed and social networking capabilities to let you explore new territory online. A smart recipe at an even smarter price is a real find, so uncover the Gem and discover what\u2019s next.", 
     "display": {
         "screenResolution": "WQVGA (400 x 240)", 
         "screenSize": "3.2 inches", 
@@ -41,9 +41,9 @@
     }, 
     "id": "samsung-gem", 
     "images": [
-        "img/phones/samsung-gem.0.jpg", 
-        "img/phones/samsung-gem.1.jpg", 
-        "img/phones/samsung-gem.2.jpg"
+        "img/recipes/samsung-gem.0.jpg", 
+        "img/recipes/samsung-gem.1.jpg", 
+        "img/recipes/samsung-gem.2.jpg"
     ], 
     "name": "Samsung Gem\u2122", 
     "sizeAndWeight": {

@@ -1,7 +1,7 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('PhoneCat controllers', function() {
+describe('RecipeCat controllers', function() {
 
   beforeEach(function(){
     this.addMatchers({
@@ -12,27 +12,27 @@ describe('PhoneCat controllers', function() {
   });
 
 
-  beforeEach(module('phonecatServices'));
+  beforeEach(module('recipecatServices'));
 
 
-  describe('PhoneListCtrl', function(){
+  describe('RecipeListCtrl', function(){
     var scope, ctrl, $httpBackend;
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('phones/phones.json').
+      $httpBackend.expectGET('recipes/recipes.json').
           respond([{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
 
       scope = $rootScope.$new();
-      ctrl = $controller(PhoneListCtrl, {$scope: scope});
+      ctrl = $controller(RecipeListCtrl, {$scope: scope});
     }));
 
 
-    it('should create "phones" model with 2 phones fetched from xhr', function() {
-      expect(scope.phones).toEqual([]);
+    it('should create "recipes" model with 2 recipes fetched from xhr', function() {
+      expect(scope.recipes).toEqual([]);
       $httpBackend.flush();
 
-      expect(scope.phones).toEqualData(
+      expect(scope.recipes).toEqualData(
           [{name: 'Nexus S'}, {name: 'Motorola DROID'}]);
     });
 
@@ -43,11 +43,11 @@ describe('PhoneCat controllers', function() {
   });
 
 
-  describe('PhoneDetailCtrl', function(){
+  describe('RecipeDetailCtrl', function(){
     var scope, $httpBackend, ctrl,
-        xyzPhoneData = function() {
+        xyzRecipeData = function() {
           return {
-            name: 'phone xyz',
+            name: 'recipe xyz',
                 images: ['image/url1.png', 'image/url2.png']
           }
         };
@@ -55,19 +55,19 @@ describe('PhoneCat controllers', function() {
 
     beforeEach(inject(function(_$httpBackend_, $rootScope, $routeParams, $controller) {
       $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('phones/xyz.json').respond(xyzPhoneData());
+      $httpBackend.expectGET('recipes/xyz.json').respond(xyzRecipeData());
 
-      $routeParams.phoneId = 'xyz';
+      $routeParams.recipeId = 'xyz';
       scope = $rootScope.$new();
-      ctrl = $controller(PhoneDetailCtrl, {$scope: scope});
+      ctrl = $controller(RecipeDetailCtrl, {$scope: scope});
     }));
 
 
-    it('should fetch phone detail', function() {
-      expect(scope.phone).toEqualData({});
+    it('should fetch recipe detail', function() {
+      expect(scope.recipe).toEqualData({});
       $httpBackend.flush();
 
-      expect(scope.phone).toEqualData(xyzPhoneData());
+      expect(scope.recipe).toEqualData(xyzRecipeData());
     });
   });
 });

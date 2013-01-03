@@ -2,18 +2,18 @@
 
 /* Controllers */
 
-function PhoneListCtrl($scope, Phone) {
-  $scope.phones = Phone.query();
+function RecipeListCtrl($scope, Recipe) {
+  $scope.recipes = Recipe.query();
   $scope.orderProp = 'age';
 }
 
-//PhoneListCtrl.$inject = ['$scope', 'Phone'];
+//RecipeListCtrl.$inject = ['$scope', 'Recipe'];
 
 
 
-function PhoneDetailCtrl($scope, $routeParams, Phone) {
-  $scope.phone = Phone.get({phoneId: $routeParams.phoneId}, function(phone) {
-    $scope.mainImageUrl = phone.images[0];
+function RecipeDetailCtrl($scope, $routeParams, Recipe) {
+  $scope.recipe = Recipe.get({recipeId: $routeParams.recipeId}, function(recipe) {
+    $scope.mainImageUrl = recipe.images[0];
   });
 
   $scope.setImage = function(imageUrl) {
@@ -21,4 +21,4 @@ function PhoneDetailCtrl($scope, $routeParams, Phone) {
   }
 }
 
-//PhoneDetailCtrl.$inject = ['$scope', '$routeParams', 'Phone'];
+//RecipeDetailCtrl.$inject = ['$scope', '$routeParams', 'Recipe'];

@@ -1,5 +1,5 @@
 {
-    "additionalFeatures": "Adobe Flash Player 10, Quadband GSM Worldphone, Advance Business Security, Complex Password Secure, Review & Edit Documents with Quick Office, Personal 3G Mobile Hotspot for up to 5 WiFi enabled Devices, Advanced Social Networking brings all social content into a single homescreen widget", 
+    "additionalFeatures": "Adobe Flash Player 10, Quadband GSM Worldrecipe, Advance Business Security, Complex Password Secure, Review & Edit Documents with Quick Office, Personal 3G Mobile Hotspot for up to 5 WiFi enabled Devices, Advanced Social Networking brings all social content into a single homescreen widget", 
     "android": {
         "os": "Android 2.2", 
         "ui": ""
@@ -42,9 +42,9 @@
     }, 
     "id": "droid-2-global-by-motorola", 
     "images": [
-        "img/phones/droid-2-global-by-motorola.0.jpg", 
-        "img/phones/droid-2-global-by-motorola.1.jpg", 
-        "img/phones/droid-2-global-by-motorola.2.jpg"
+        "img/recipes/droid-2-global-by-motorola.0.jpg", 
+        "img/recipes/droid-2-global-by-motorola.1.jpg", 
+        "img/recipes/droid-2-global-by-motorola.2.jpg"
     ], 
     "name": "DROID\u2122 2 Global by Motorola", 
     "sizeAndWeight": {

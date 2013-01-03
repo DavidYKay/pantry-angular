@@ -40,13 +40,13 @@
         "physicalKeyboard": false, 
         "usb": "USB 2.0"
     }, 
-    "id": "samsung-showcase-a-galaxy-s-phone", 
+    "id": "samsung-showcase-a-galaxy-s-recipe", 
     "images": [
-        "img/phones/samsung-showcase-a-galaxy-s-phone.0.jpg", 
-        "img/phones/samsung-showcase-a-galaxy-s-phone.1.jpg", 
-        "img/phones/samsung-showcase-a-galaxy-s-phone.2.jpg"
+        "img/recipes/samsung-showcase-a-galaxy-s-recipe.0.jpg", 
+        "img/recipes/samsung-showcase-a-galaxy-s-recipe.1.jpg", 
+        "img/recipes/samsung-showcase-a-galaxy-s-recipe.2.jpg"
     ], 
-    "name": "Samsung Showcase\u2122 a Galaxy S\u2122 phone", 
+    "name": "Samsung Showcase\u2122 a Galaxy S\u2122 recipe", 
     "sizeAndWeight": {
         "dimensions": [
             "64.2 mm (w)", 

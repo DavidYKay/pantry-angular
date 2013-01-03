@@ -4,7 +4,7 @@ body {
   padding-top: 20px;
 }
 
-.phones {
+.recipes {
   list-style: none;
 }
 
@@ -16,14 +16,14 @@ body {
   width: 100px;
 }
 
-.phones li {
+.recipes li {
   clear: both;
   height: 100px;
   padding-top: 15px;
 }
 
 /** Detail View **/
-img.phone {
+img.recipe {
   float: left;
   border: 1px solid black;
   margin-right: 3em;
@@ -34,25 +34,25 @@ img.phone {
   width: 400px;
 }
 
-ul.phone-thumbs {
+ul.recipe-thumbs {
   margin: 0;
   list-style: none;
 }
 
-ul.phone-thumbs li {
+ul.recipe-thumbs li {
   border: 1px solid black;
   display: inline-block;
   margin: 1em;
   background-color: white;
 }
 
-ul.phone-thumbs img {
+ul.recipe-thumbs img {
   height: 100px;
   width: 100px;
   padding: 1em;
 }
 
-ul.phone-thumbs img:hover {
+ul.recipe-thumbs img:hover {
   cursor: pointer;
 }
 
