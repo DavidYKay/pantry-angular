@@ -1,0 +1,13 @@
+{
+    "description": "This dish is an Indian staple.",
+    "id": "chicken-tikka-masala", 
+    "images": [
+        "img/recipes/chicken-tikka-masala.001.jpg", 
+        "img/recipes/chicken-tikka-masala.002.jpg", 
+        "img/recipes/chicken-tikka-masala.003.jpg", 
+        "img/recipes/chicken-tikka-masala.004.jpg", 
+        "img/recipes/chicken-tikka-masala.005.jpg"
+        "img/recipes/chicken-tikka-masala.006.jpg",
+    ], 
+    "name": "Chicken Tikka Masala"
+}
