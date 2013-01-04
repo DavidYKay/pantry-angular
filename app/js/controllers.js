@@ -7,6 +7,10 @@ function RecipeListCtrl($scope, Recipe) {
   $scope.orderProp = 'age';
 }
 
+function RecipeNewCtrl($scope, Recipe) {
+
+}
+
 //RecipeListCtrl.$inject = ['$scope', 'Recipe'];
 
 

@@ -5,5 +5,12 @@
         "imageUrl": "img/recipes/chicken-tikka-masala.001.jpg", 
         "name": "Chicken Tikka Masala", 
         "snippet": "Delicious, creamy Indian chicken with mild spice."
+    },
+    {
+        "age": 1, 
+        "id": "buttered-potatoes", 
+        "imageUrl": "img/recipes/buttered-potatoes.001.jpg", 
+        "name": "Buttered potatoes", 
+        "snippet": "Homestyle potatoes that Phipps would be proud of!"
     }
 ]
