@@ -16,15 +16,15 @@
     Background:
     </p>
     <p>
-    This is a yummy recipe from India.
+      {{ recipe.background }}
     </p>
   </div>
   <div class="span3">
     Ingredients:
     <ul>
-      <li>Chicken Tenderloin</li>
-      <li>Heavy Cream</li>
-      <li>Tomato Puree</li>
+      <li ng-repeat="ingredient in recipe.ingredients">
+        {{ ingredient }}
+      </li>
     </ul>
   </div>
 </div>

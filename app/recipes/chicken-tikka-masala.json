@@ -9,5 +9,11 @@
         "img/recipes/chicken-tikka-masala.005.jpg",
         "img/recipes/chicken-tikka-masala.006.jpg"
     ], 
-    "name": "Chicken Tikka Masala"
+    "name": "Chicken Tikka Masala",
+    "background": "This is a yummy recipe from Northern India.",
+    "ingredients": [
+      "Chicken Tenderloin",
+      "Heavy Cream",
+      "Tomato Puree"
+    ]
 }

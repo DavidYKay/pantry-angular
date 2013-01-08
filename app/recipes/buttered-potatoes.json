@@ -1,0 +1,16 @@
+{
+    "description": "Delicious but bad for you!",
+    "id": "buttered-potatoes", 
+    "images": [
+        "img/recipes/buttered-potatoes.001.jpg",
+        "img/recipes/buttered-potatoes.002.jpg",
+        "img/recipes/buttered-potatoes.003.jpg"
+    ], 
+    "name": "Buttered Potatoes",
+    "background": "This is a yummy recipe from the Southern United States.",
+    "ingredients": [
+      "White Potatoes",
+      "Unsalted Butter",
+      "Salt"
+    ]
+}
