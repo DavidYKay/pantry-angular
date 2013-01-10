@@ -1,26 +1,47 @@
+<div ng-controller="RecipeNewCtrl">
 
-<h2>New Recipe</h2>
+  <h2>New Recipe</h2>
 
-<p>
+  <form id="recipe-form" 
+    ng-submit="addStep()"
+    >
 
-This is where my master recipe form will go!
-</p>
+    <input type="file" id="input">
 
+    <label for="recipe-name">Recipe Name</label>
+    <input type="text" name="recipe-name" placeholder="Mama's Favorite Recipe">
 
-<form id="todo-form" ng-controller="RecipeNewCtrl">
-  <input id="new-todo" placeholder="What needs to be done?" ng-model="newRecipe" autofocus>
-  
-</form>
+    <label for="description">Description</label>
+    <textarea name="description" rows="4" cols="80" 
+      placeholder=" " >This is one of my favorite recipes because...
+    </textarea>
 
-<form id="recipe-form" ng-submit="addRecipe()">
-  <label for="recipe-name">Recipe Name</label>
-  <input type="text" name="recipe-name">
+    <label for="next-step">Next Step</label>
+    <input id="next-step" placeholder="Beat the eggs" ng-model="newStep" autofocus>
+    <ol>
+      <li ng-repeat="step in steps">
+        {{ step.title }}
+      </li>
+    </ol>
 
-  <label for="directions">Directions</label>
-  <textarea name="directions" rows="4" cols="50">
-    1. Grease the pan
-    2. Break an egg into the pan
-    3. Turn on the heat
-    4. You have fried an egg!
-  </textarea>
-</form>
+    <div>
+      <button class="btn btn-primary">
+        Save
+      </button>
+    </div>
+
+  </form>
+
+  <form id="ingredient-form" 
+    ng-submit="addIngredient()"
+    >
+    <label for="next-ingredient">Next Ingredient</label>
+    <input id="next-ingredient" placeholder="Eggs" ng-model="newIngredient" autofocus>
+    <ol>
+      <li ng-repeat="ingredient in ingredients">
+        {{ ingredient.title }}
+      </li>
+    </ol>
+  </form>
+
+</div>

@@ -7,32 +7,56 @@ function RecipeListCtrl($scope, Recipe) {
   $scope.orderProp = 'age';
 }
 
-function RecipeNewCtrl($scope, Recipe) {
-  var recipes = $scope.recipes = recipeStorage.get();
+function RecipeNewCtrl($scope, Recipe, stepStorage, ingredientStorage, filterFilter) {
+  var steps = $scope.steps = stepStorage.get();
 
-  $scope.newRecipe = "";
-  $scope.editedRecipe = null;
+  $scope.newStep = "";
+  $scope.editedStep = null;
+  
+  var ingredients = $scope.ingredients = ingredientStorage.get();
+  $scope.newIngredient = "";
+  $scope.editedIngredient = null;
 
-  $scope.$watch('recipes', function() {
-    $scope.remainingCount = filterFilter(recipes, {completed: false}).length;
-    $scope.doneCount = recipes.length - $scope.remainingCount;
+  $scope.$watch('steps', function() {
+    $scope.remainingCount = filterFilter(steps, {completed: false}).length;
+    $scope.doneCount = steps.length - $scope.remainingCount;
     $scope.allChecked = !$scope.remainingCount
-    recipeStorage.put(recipes);
+    stepStorage.put(steps);
+  }, true);
+  
+  $scope.$watch('ingredients', function() {
+    $scope.remainingCount = filterFilter(ingredients, {completed: false}).length;
+    $scope.doneCount = ingredients.length - $scope.remainingCount;
+    $scope.allChecked = !$scope.remainingCount
+    ingredientStorage.put(ingredients);
   }, true);
 
 
-  $scope.addRecipe = function() {
-    if ( !$scope.newRecipe.length ) {
+  $scope.addStep = function() {
+    if ( !$scope.newStep.length ) {
       return;
     }
 
-    recipes.push({
-      title: $scope.newRecipe,
-        completed: false
+    steps.push({
+      title: $scope.newStep,
+      completed: false
     });
 
-    $scope.newRecipe = '';
+    $scope.newStep = '';
   };
+  
+  $scope.addIngredient = function() {
+    if ( !$scope.newIngredient.length ) {
+      return;
+    }
+
+    ingredients.push({
+      title: $scope.newIngredient,
+    });
+
+    $scope.newIngredient = '';
+  };
+
 
 }
 
