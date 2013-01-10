@@ -2,46 +2,61 @@
 
   <h2>New Recipe</h2>
 
-  <form id="recipe-form" 
-    ng-submit="addStep()"
-    >
+  <div class="row-fluid">
 
-    <input type="file" id="input">
-
-    <label for="recipe-name">Recipe Name</label>
-    <input type="text" name="recipe-name" placeholder="Mama's Favorite Recipe">
-
-    <label for="description">Description</label>
-    <textarea name="description" rows="4" cols="80" 
-      placeholder=" " >This is one of my favorite recipes because...
-    </textarea>
-
-    <label for="next-step">Next Step</label>
-    <input id="next-step" placeholder="Beat the eggs" ng-model="newStep" autofocus>
-    <ol>
-      <li ng-repeat="step in steps">
-        {{ step.title }}
-      </li>
-    </ol>
-
-    <div>
-      <button class="btn btn-primary">
-        Save
-      </button>
+    <div class="span3">
+      <img src="http://placehold.it/150x150">
     </div>
 
-  </form>
+    <div class="span6">
+      <form id="recipe-form" 
+        ng-submit="addStep()"
+        >
 
-  <form id="ingredient-form" 
-    ng-submit="addIngredient()"
-    >
-    <label for="next-ingredient">Next Ingredient</label>
-    <input id="next-ingredient" placeholder="Eggs" ng-model="newIngredient" autofocus>
-    <ol>
-      <li ng-repeat="ingredient in ingredients">
-        {{ ingredient.title }}
-      </li>
-    </ol>
-  </form>
+        <!--<input type="file" id="input">-->
+
+        <label for="recipe-name">Recipe Name</label>
+        <input type="text" name="recipe-name" placeholder="Mama's Favorite Recipe">
+
+        <label for="description">Description</label>
+        <textarea name="description" rows="4" cols="80" 
+          placeholder=" " >This is one of my favorite recipes because...
+        </textarea>
+
+        <label for="next-step">Directions</label>
+        <ol>
+          <li ng-repeat="step in steps">
+            {{ step.title }}
+            <i class="icon-remove-sign" ng-click="removeStep(step)" ></i>
+          </li>
+        </ol>
+        <input id="next-step" placeholder="Beat the eggs" ng-model="newStep" autofocus>
+
+        <div>
+          <button class="btn btn-primary">
+            Save Recipe
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <div class="span3">
+      <form id="ingredient-form" 
+        ng-submit="addIngredient()"
+        >
+        <label for="next-ingredient">Ingredients</label>
+        <ul>
+          <li ng-repeat="ingredient in ingredients">
+            {{ ingredient.title }}
+            <i class="icon-remove-sign" ng-click="removeIngredient(ingredient)" ></i>
+          </li>
+        </ul>
+        <input id="next-ingredient" placeholder="Eggs" ng-model="newIngredient" autofocus>
+      </form>
+    </div>
+
+  </div>
 
 </div>

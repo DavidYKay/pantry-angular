@@ -25,12 +25,8 @@ function RecipeNewCtrl($scope, Recipe, stepStorage, ingredientStorage, filterFil
   }, true);
   
   $scope.$watch('ingredients', function() {
-    $scope.remainingCount = filterFilter(ingredients, {completed: false}).length;
-    $scope.doneCount = ingredients.length - $scope.remainingCount;
-    $scope.allChecked = !$scope.remainingCount
     ingredientStorage.put(ingredients);
   }, true);
-
 
   $scope.addStep = function() {
     if ( !$scope.newStep.length ) {
@@ -56,7 +52,16 @@ function RecipeNewCtrl($scope, Recipe, stepStorage, ingredientStorage, filterFil
 
     $scope.newIngredient = '';
   };
-
+  
+  $scope.removeStep = function(step) {
+    console.log("Attempting to remove step: " + step);
+    steps.splice(steps.indexOf(step), 1);
+  };
+  
+  $scope.removeIngredient = function(ingredient) {
+    console.log("Attempting to remove ingredient: " + ingredient);
+    ingredients.splice(ingredients.indexOf(ingredient), 1);
+  };
 
 }
 
